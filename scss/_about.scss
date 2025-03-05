@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+@use 'variable' as v;
+@use 'mixin' as m;
+
+/*-----------------------------------------
+aboutページ
+------------------------------------------*/
+.about__wrap{
+	margin-top: 120px;
+	max-width: 600px;
+
+	@include m.sp{
+		margin-bottom: 132px;
+	}
+}
+
+.about__txt{
+	max-width: 600px;
+	margin-bottom: 122px;
+
+	@include m.sp{
+		width: 100%;
+	}
+
+	p{
+		font-size: 1.4rem;
+		
+		&:not(:last-child){
+			margin-bottom: 30px;
+		}
+	}
+}

@@ -1,0 +1,448 @@
+@charset "UTF-8";
+/*-----------------------------------------
+共通部分
+------------------------------------------*/
+/*-----------------------------------------
+レスポンシブ
+------------------------------------------*/
+/*-----------------------------------------
+共通部分
+------------------------------------------*/
+html {
+  font-size: 62.5%;
+}
+
+/*
+フッターを画面下に配置するために、
+「position: relative;」を設定
+「min-height」で最小の高さを画面の高さにあわせる
+*/
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  color: #333;
+  min-height: 100vh;
+  position: relative;
+}
+
+img {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.wrap {
+  max-width: 1360px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100%;
+  margin: auto;
+}
+
+.section__title {
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+/*-----------------------------------------
+ヘッダー
+------------------------------------------*/
+.header {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  z-index: 10;
+}
+
+.header__logo {
+  width: 180px;
+}
+
+/*-----------------------------------------
+ハンバーガーメニュー
+------------------------------------------*/
+/* ハンバーガーメニューボタン(.hamburger-menu)のCSSを書いてください */
+.hamburger-menu {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+/* ハンバーガーメニューボタンにカーソルを合わせた時のCSSを書いてください */
+.hamburger-menu:hover {
+  opacity: 0.5;
+}
+
+/* ハンバーガーメニューボタン内の3本線のCSSを書いてください */
+.hamburger-menu span {
+  width: 30px;
+  height: 2px;
+  background: #333;
+  position: absolute;
+  transition: 0.4s ease-in-out;
+}
+
+/* それぞれの線の位置を指定するCSSを書いてください */
+.hamburger-menu span:nth-child(1) {
+  top: 10px;
+}
+
+.hamburger-menu span:nth-child(2) {
+  top: 20px;
+}
+
+/* ナビゲーションのCSSを書いてください */
+#hamburger-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  color: #fff;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+/* ナビゲーション内のセクションのCSSを書いてください */
+.sections {
+  list-style: none;
+  margin-top: 36px;
+  margin-left: 50px;
+}
+
+/* セクション内のリストのCSSを書いてください */
+.hamburger-menu-section {
+  margin-bottom: 14px;
+}
+.hamburger-menu-section a {
+  color: #fff;
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+
+/* ナビゲーションを表示するためのCSSを書いてください */
+#hamburger-navigation.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ナビゲーションを表示するためのCSSを書いてください */
+/* ナビゲーションが表示している時のボタンがXになるようCSSを書いてください */
+.hamburger-menu.active span:nth-child(1) {
+  top: 15px;
+  transform: rotate(-45deg);
+  background: #fff;
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  top: 15px;
+  transform: rotate(45deg);
+  background: #fff;
+}
+
+/*-----------------------------------------
+フッター
+------------------------------------------*/
+/*
+「position: absolute;」を設定して、フッター位置を画面下に設定
+「left: 0;」「right: 0;」で中央に配置
+*/
+.footer {
+  height: 38px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+@media (max-width: 900px) {
+  .footer {
+    height: 58px;
+    display: block;
+  }
+}
+
+.footer__list {
+  display: flex;
+}
+@media (max-width: 900px) {
+  .footer__list {
+    margin-bottom: 5px;
+  }
+}
+
+.footer__item {
+  font-size: 1.2rem;
+}
+.footer__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.footer__copy {
+  font-size: 1rem;
+}
+
+/*-----------------------------------------
+トップページ
+------------------------------------------*/
+.wrapper {
+  margin-top: 80px;
+  padding-bottom: 121px;
+}
+@media (max-width: 900px) {
+  .wrapper {
+    padding-bottom: 102px;
+  }
+}
+
+.top__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 34px;
+       column-gap: 34px;
+  row-gap: 40px;
+  margin-bottom: 40px;
+}
+@media (max-width: 900px) {
+  .top__grid {
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 19px;
+         column-gap: 19px;
+    margin-bottom: 59px;
+  }
+}
+
+/*
+vertical-align: top;
+画像の下にできる隙間を消す
+*/
+.top__grid-img {
+  margin-bottom: 10px;
+  vertical-align: top;
+}
+
+.top__grid-txt {
+  font-size: 12px;
+}
+
+.viewmore {
+  text-align: center;
+}
+
+.more {
+  font-size: 1.4rem;
+}
+
+/*-----------------------------------------
+プロダクトページ
+------------------------------------------*/
+.product__wrap {
+  margin-top: 120px;
+  padding-bottom: 121px;
+}
+
+.pagination {
+  width: 60px;
+  margin: auto;
+}
+
+.pagination-list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+}
+
+/*-----------------------------------------
+商品詳細ページ
+------------------------------------------*/
+.detail__wrap {
+  margin-top: 120px;
+  margin-bottom: 122px;
+  max-width: 800px;
+}
+@media (max-width: 900px) {
+  .detail__wrap {
+    margin-bottom: 102px;
+  }
+}
+
+.detail__content {
+  max-width: 800px;
+  display: flex;
+  margin-bottom: 60px;
+}
+@media (max-width: 900px) {
+  .detail__content {
+    display: block;
+  }
+}
+
+.detail__img {
+  width: 50%;
+  margin-right: 8%;
+}
+@media (max-width: 900px) {
+  .detail__img {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+.detail__txt {
+  width: 42%;
+  font-size: 1.4rem;
+}
+@media (max-width: 900px) {
+  .detail__txt {
+    width: 100%;
+  }
+}
+.detail__txt p {
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.deatail__des {
+  display: flex;
+  flex-wrap: wrap;
+}
+.deatail__des dt {
+  width: 30%;
+}
+.deatail__des dd {
+  width: 70%;
+}
+
+.detail__link {
+  font-size: 1.4rem;
+  text-align: center;
+}
+.detail__link a {
+  color: #333;
+}
+
+/*-----------------------------------------
+aboutページ
+------------------------------------------*/
+.about__wrap {
+  margin-top: 120px;
+  max-width: 600px;
+}
+@media (max-width: 900px) {
+  .about__wrap {
+    margin-bottom: 132px;
+  }
+}
+
+.about__txt {
+  max-width: 600px;
+  margin-bottom: 122px;
+}
+@media (max-width: 900px) {
+  .about__txt {
+    width: 100%;
+  }
+}
+.about__txt p {
+  font-size: 1.4rem;
+}
+.about__txt p:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+/*-----------------------------------------
+company
+------------------------------------------*/
+.company__wrap {
+  margin-top: 120px;
+  max-width: 600px;
+  margin-bottom: 181px;
+}
+@media (max-width: 900px) {
+  .company__wrap {
+    margin-bottom: 102px;
+  }
+}
+
+.company__section {
+  max-width: 600px;
+}
+
+.company__dl {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+}
+@media (max-width: 900px) {
+  .company__dl {
+    display: block;
+  }
+}
+.company__dl dt {
+  width: 30%;
+  padding: 20px 0 20px 10px;
+}
+@media (max-width: 900px) {
+  .company__dl dt {
+    padding: 20px 0 10px 10px;
+  }
+}
+.company__dl:not(:last-of-type) {
+  border-bottom: 1px solid #DCDBDB;
+}
+@media (max-width: 900px) {
+  .company__dl:not(:last-of-type) {
+    border-bottom: none;
+  }
+}
+.company__dl dd {
+  width: 70%;
+  padding: 20px 0;
+}
+@media (max-width: 900px) {
+  .company__dl dd {
+    padding: 0 0 20px 10px;
+  }
+}
+.company__dl dd:not(:last-of-type) {
+  border-bottom: 1px solid #DCDBDB;
+}
+
+.company__map {
+  filter: grayscale(100%);
+}
+.company__map iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+}/*# sourceMappingURL=style.css.map */

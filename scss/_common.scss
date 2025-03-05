@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+@use 'variable' as v;
+@use 'mixin' as m;
+
+/*-----------------------------------------
+共通部分
+------------------------------------------*/
+html{
+	font-size: 62.5%;
+}
+
+body{
+	font-family: 'Helvetica Neue', Arial, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+	color: #333;
+	min-height: 100vh;
+	position: relative;
+}
+
+img{
+	width: 100%;
+	height: auto;
+}
+
+li{
+	list-style: none;
+}
+
+a{
+  color: #333;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+.section__title{
+	font-size: 14px;
+	margin-bottom: 30px;
+}

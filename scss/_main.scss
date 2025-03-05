@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+@use 'variable' as v;
+@use 'mixin' as m;
+
+/*-----------------------------------------
+トップページ
+------------------------------------------*/
+.top__grid{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 34px;
+	row-gap: 40px;
+	margin-bottom: 40px;
+
+	@include breakpoint (tablet){
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 19px;
+		margin-bottom: 59px;
+	}
+}
+/*
+vertical-align: top;
+画像の下にできる隙間を消す
+*/
+.top__grid-img{
+	margin-bottom: 10px;
+	vertical-align: top;
+}
+
+.top__grid-txt{
+	font-size: 1.2rem;
+}
+
+.viewmore{
+	text-align: center;
+}
+
+.more{
+	font-size: 1.4rem;
+}

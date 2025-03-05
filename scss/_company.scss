@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+@use 'variable' as v;
+@use 'mixin' as m;
+
+/*-----------------------------------------
+company
+------------------------------------------*/
+.company__wrap{
+	margin-top: 120px;
+	max-width: 600px;
+	margin-bottom: 181px;
+
+	@include m.sp{
+		margin-bottom: 102px;
+	}
+}
+
+.company__section{
+	max-width: 600px;
+}
+
+.company__dl{
+	display: flex;
+	flex-wrap: wrap;
+	font-size: 1.4rem;
+	margin-bottom: 40px;
+
+	@include m.sp{
+		display: block;
+	}
+
+	dt{
+		width: 30%;
+		padding: 20px 0 20px 10px;
+
+		@include m.sp{
+			padding: 20px 0 10px 10px;
+		}
+	}
+
+		&:not(:last-of-type){
+			border-bottom: 1px solid #DCDBDB;
+
+			@include m.sp{
+				border-bottom: none;
+			}
+		}
+
+	dd{
+		width: 70%;
+		padding: 20px 0;
+
+		@include m.sp{
+			padding: 0 0 20px 10px;
+		}
+
+		&:not(:last-of-type){
+			border-bottom: 1px solid #DCDBDB;
+		}
+	}
+}
+
+.company__map{
+	filter: grayscale(100%);
+
+	iframe{
+		width: 100%;
+		height: 300px;
+		border: 0;
+	}
+}

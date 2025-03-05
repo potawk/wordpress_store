@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+@use 'variable' as v;
+@use 'mixin' as m;
+
+/*-----------------------------------------
+プロダクトページ
+------------------------------------------*/
+.product__wrap{
+	margin-top: 120px;
+	padding-bottom: 121px;
+}
+
+.pagination{
+	width: 60px;
+	margin: auto;
+}
+
+.pagination-list{
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.4rem;
+}

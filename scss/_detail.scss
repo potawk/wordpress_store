@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+@use 'variable' as v;
+@use 'mixin' as m;
+
+/*-----------------------------------------
+商品詳細ページ
+------------------------------------------*/
+.detail__wrap{
+	margin-top: 120px;
+	margin-bottom: 122px;
+	max-width: 800px;
+
+	@include m.sp{
+		margin-bottom: 102px;
+	}
+}
+
+.detail__content{
+	max-width: 800px;
+	display: flex;
+	margin-bottom: 60px;
+
+	@include m.sp{
+		display: block;
+	}
+}
+
+.detail__img{
+	width: 50%;
+	margin-right: 8%;
+
+	@include m.sp{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+}
+
+.detail__txt{
+	width: 42%;
+	font-size: 1.4rem;
+
+	@include m.sp{
+		width: 100%;
+	}
+
+	p{
+		margin-bottom: 30px;
+		text-align: justify;
+	}
+}
+
+.deatail__des{
+	display: flex;
+	flex-wrap: wrap;
+
+	dt{
+		width: 30%;
+	}
+
+	dd{
+		width: 70%;
+	}
+}
+
+.detail__link{
+	font-size: 1.4rem;
+	text-align: center;
+
+	a{
+		color: #333;
+	}
+}

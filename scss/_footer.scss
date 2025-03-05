@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+@use 'variable' as v;
+@use 'mixin' as m;
+
+/*-----------------------------------------
+フッター
+------------------------------------------*/
+.footer{
+	height: 38px;
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	background: #fff;
+	position: absolute;
+	left: 0;
+	right: 0;
+
+	@include m.sp{
+		height: 58px;
+		display: block;
+	}
+}
+
+.footer__list{
+	display: flex;
+
+	@include m.sp{
+		margin-bottom: 5px;
+	}
+}
+
+.footer__item{
+	font-size: 1.2rem;
+
+	&:not(:last-child){
+		margin-right: 30px;
+	}
+}
+
+.footer__copy{
+	font-size: 1rem;
+}
