@@ -20,7 +20,7 @@
 							<div class="top__grid-img"><?php the_post_thumbnail(); ?></div>
 							<div class="top__grid-txt">
 								<p><?php the_title(); ?></p>
-								<p>&yen;<?php the_field('price'); ?></p>
+								<p>&yen;<?php the_field('price'); ?> +tax</p>
 							</div>
 						</a>
 					</li>
