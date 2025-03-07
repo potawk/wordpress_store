@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
-@use 'variable' as v;
-@use 'mixin' as m;
+@use '../abstracts/variable' as v;
+@use '../abstracts/mixin' as m;
 
 /*-----------------------------------------
 ヘッダー
