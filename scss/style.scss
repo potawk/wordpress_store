@@ -1,13 +1,22 @@
 @charset "UTF-8";
 
-@use "variable" as v;
-@use "mixin" as m;
-@use "common";
-@use "header";
-@use "footer";
-@use "layout";
-@use "main";
-@use "product";
-@use "detail";
-@use "about";
-@use "company";
+/* Abstract */
+@use 'abstracts/variable' as v;
+@use 'abstracts/mixin' as m;
+
+/* Base */
+@use "base/common";
+
+/* Layout */
+@use "layout/header";
+@use "layout/footer";
+@use "layout/layout";
+
+/* Pages */
+@use "pages/main";
+@use "pages/product";
+@use "pages/detail";
+@use "pages/about";
+@use "pages/company";
+
+/* Components */
